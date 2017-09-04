@@ -5,5 +5,9 @@
 
 
 a = list(set([int(j) for j in input().split()]) & set([int(j) for j in input().split()]))
-for elem in a:
+for elem in sorted(a):
     print(elem, end=' ')
+
+# А можно сделать и в одну строку:
+
+print(*sorted(set(input().split()) & set(input().split()), key=int))
